@@ -1,0 +1,51 @@
+{
+  "kind": "collectionType",
+  "collectionName": "contactuses",
+  "info": {
+    "name": "ContactUs"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "Destinations": {
+      "type": "text"
+    },
+    "number_of_passengers": {
+      "type": "string",
+      "required": true
+    },
+    "year": {
+      "type": "biginteger"
+    },
+    "month": {
+      "type": "integer"
+    },
+    "day": {
+      "type": "integer"
+    },
+    "details": {
+      "type": "text"
+    },
+    "aspectss": {
+      "type": "string"
+    },
+    "currency": {
+      "type": "string"
+    },
+    "budget": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "phone_number": {
+      "type": "string"
+    },
+    "email": {
+      "type": "email"
+    }
+  }
+}
