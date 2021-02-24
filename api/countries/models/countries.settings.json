@@ -1,0 +1,54 @@
+{
+  "kind": "collectionType",
+  "collectionName": "countries",
+  "info": {
+    "name": "Countries",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "CountryName": {
+      "type": "string",
+      "required": true
+    },
+    "bannerImage": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": true
+    },
+    "luxuryTripTitle": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "richtext",
+      "required": true
+    },
+    "quote": {
+      "type": "text"
+    },
+    "exampleTripsTitle": {
+      "type": "string",
+      "required": true
+    },
+    "InspiringDestinationsTitle": {
+      "type": "string"
+    },
+    "BannerText": {
+      "type": "string",
+      "required": true
+    },
+    "example_trips": {
+      "via": "country",
+      "collection": "example-trips"
+    }
+  }
+}

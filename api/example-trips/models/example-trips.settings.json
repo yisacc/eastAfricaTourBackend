@@ -1,0 +1,79 @@
+{
+  "kind": "collectionType",
+  "collectionName": "example_trips",
+  "info": {
+    "name": "ExampleTrips",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "TripName": {
+      "type": "string",
+      "required": true
+    },
+    "Introduction": {
+      "type": "text"
+    },
+    "ItineraryHighlights": {
+      "type": "richtext"
+    },
+    "WhatsIncluded": {
+      "type": "richtext"
+    },
+    "Ataglance": {
+      "type": "richtext"
+    },
+    "Map": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "Carousel": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "DestinationName": {
+      "type": "string"
+    },
+    "priceStartFrom": {
+      "type": "string"
+    },
+    "travelPackagesDescription": {
+      "type": "text"
+    },
+    "cardImage": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "ShowInHomePage": {
+      "type": "boolean",
+      "default": false
+    },
+    "country": {
+      "model": "countries",
+      "via": "example_trips"
+    },
+    "example_trip_itineraries": {
+      "collection": "example-trip-itinerary",
+      "via": "example_trip"
+    }
+  }
+}

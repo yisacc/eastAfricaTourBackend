@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/example-trip-itineraries",
+      "handler": "example-trip-itinerary.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/example-trip-itineraries/count",
+      "handler": "example-trip-itinerary.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/example-trip-itineraries/:id",
+      "handler": "example-trip-itinerary.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/example-trip-itineraries",
+      "handler": "example-trip-itinerary.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/example-trip-itineraries/:id",
+      "handler": "example-trip-itinerary.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/example-trip-itineraries/:id",
+      "handler": "example-trip-itinerary.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

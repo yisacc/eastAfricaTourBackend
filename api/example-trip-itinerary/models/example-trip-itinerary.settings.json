@@ -1,0 +1,81 @@
+{
+  "kind": "collectionType",
+  "collectionName": "example_trip_itineraries",
+  "info": {
+    "name": "Example_trip_itinerary"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "Days": {
+      "type": "string",
+      "required": true
+    },
+    "Section_id": {
+      "type": "string",
+      "required": true
+    },
+    "Title": {
+      "type": "string",
+      "required": true
+    },
+    "isThereFlightsAndTransfers": {
+      "type": "boolean",
+      "required": true
+    },
+    "flightsTransfers": {
+      "type": "json"
+    },
+    "activityImage": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": true
+    },
+    "activitiesTitle": {
+      "type": "string",
+      "required": true
+    },
+    "activitiesDescription": {
+      "type": "text",
+      "required": true
+    },
+    "doesItHaveAddtionalActivities": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "additionalActivityImage": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "additionalActivitiesTitle": {
+      "type": "text"
+    },
+    "additionalActivitiesDescription": {
+      "type": "text"
+    },
+    "Order": {
+      "type": "integer",
+      "required": true
+    },
+    "flightsAndTransfersBefore": {
+      "type": "json"
+    },
+    "example_trip": {
+      "via": "example_trip_itineraries",
+      "model": "example-trips"
+    }
+  }
+}

@@ -1,0 +1,8 @@
+{
+    "provider":"cloudinary",
+"providerOptions":{
+    "cloud_name":"eastafricatourandtravel",
+    "api_key":"727125242724999",
+    "api_secret":"jA7BrIrsz7oYNPsW4huuvbekUac"
+}
+}
